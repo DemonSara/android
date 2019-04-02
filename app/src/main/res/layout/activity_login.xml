@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/address_select"/>
+
+ <LinearLayout
+     android:layout_marginTop="40dp"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:gravity="center_vertical"
+     android:paddingLeft="60dp"
+     android:paddingRight="55dp">
+
+     <EditText
+         android:id="@+id/et_phone_loginActivity"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:background="@null"
+         android:drawableLeft="@mipmap/usericon"
+         android:drawablePadding="10dp"
+         android:hint="用户名或邮箱"
+
+         android:maxLength="11"
+         android:singleLine="true"
+         android:textColorHint="#bebebe"
+         android:textSize="18sp" />
+
+ </LinearLayout>
+    <View
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ebebeb"
+        />
+
+    <EditText
+        android:drawableLeft="@mipmap/locked"
+        android:drawablePadding="10dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="17dp"
+        android:id="@+id/et_psw_loginActivity"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="输入登录密码"
+        android:maxLength="14"
+        android:singleLine="true"
+        android:textColorHint="#bebebe"
+        android:textSize="18sp" />
+    <View
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ebebeb"
+        />
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="55dip"
+        android:layout_marginRight="55dip"
+        android:id="@+id/bt_loginActivity"
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:background="@drawable/button_click_selector_green"
+        android:text="登录"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

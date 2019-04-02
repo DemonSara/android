@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="back_color_click">#8fff</color>
+    <color name="back_color_noclick">#ffff</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#ff0080ff</color>
+    <color name="color_content">#ff7e7e7e</color>
+    <color name="color_split_line">#ffCDCDC1</color>
+    <color name="gray_bg">#cccccc</color>
+    <color name="red">#ff0000</color>
+    <color name="text">#f666</color>
+    <color name="transparent">#0000</color>
+    <color name="white">#ffffffff</color>
+    <declare-styleable name="GifView"><attr format="reference" name="gif"/><attr format="boolean" name="paused"/></declare-styleable>
+    <declare-styleable name="RecyclerView"><attr format="integer" name="counts"/><attr format="boolean" name="hideRefresh"/></declare-styleable>
+    <string name="app_name">JanlentBP</string>
+    <string name="cancle">取消</string>
+    <string name="commit">确定</string>
+    <string name="current_date">当前日期</string>
+    <string name="current_time">当前时间</string>
+    <string name="day">日</string>
+    <string name="dialogloading">数据加载中</string>
+    <string name="hour">时</string>
+    <string name="latest_image">最近照片</string>
+    <string name="main_back">返回</string>
+    <string name="main_cancel">取消</string>
+    <string name="main_confirm">确定</string>
+    <string name="minute">分</string>
+    <string name="month">月</string>
+    <string name="photo_album">相册</string>
+    <string name="select_album">选择相册</string>
+    <string name="select_date">选择日期</string>
+    <string name="select_image">选择图片</string>
+    <string name="select_time">选择时间</string>
+    <string name="title">请选择时间</string>
+    <string name="year">年</string>
+    <style name="AnimationFadeBottom">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+    <style name="AnimationFadeLeft">
+        <item name="android:windowEnterAnimation">@anim/push_left_in</item>
+        <item name="android:windowExitAnimation">@anim/push_left_out</item>
+    </style>
+    <style name="AnimationFadeRight">
+        <item name="android:windowEnterAnimation">@anim/push_right_in</item>
+        <item name="android:windowExitAnimation">@anim/push_right_out</item>
+    </style>
+    <style name="AnimationFadeTop">
+        <item name="android:windowEnterAnimation">@anim/push_top_in</item>
+        <item name="android:windowExitAnimation">@anim/push_top_out</item>
+    </style>
+    <style name="AppBaseTheme" parent="android:Theme.Light"/>
+    <style name="AppTheme" parent="AppBaseTheme"/>
+    <style name="Widget.MaterialProgressBar.ProgressBar.Horizontal" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateDrawable">@null</item>
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+
+    </style>
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@android:color/transparent</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+    <style name="time_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+</resources>

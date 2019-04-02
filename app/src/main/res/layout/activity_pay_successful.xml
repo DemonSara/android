@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="113dp"
+        android:src="@mipmap/plan"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="#ea3c3c"
+        android:text="支付成功"
+        android:textSize="22dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="您可进入“我的订单”查看详情"
+        android:textSize="13dp"
+        android:textColor="#999999"/>
+    <TextView
+        android:id="@+id/tv_ViewPlan_SuccessfulPlanActivity"
+        android:layout_width="128dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:text="完成"
+        android:textSize="15dp"
+        android:background="@drawable/tv_bag4dp_red1"
+        android:layout_gravity="center"/>
+</LinearLayout>

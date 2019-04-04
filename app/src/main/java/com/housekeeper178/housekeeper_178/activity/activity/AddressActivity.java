@@ -1,6 +1,6 @@
 package com.housekeeper178.housekeeper_178.activity.activity;
 
-import android.content.Intent;
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -39,6 +39,7 @@ tvAddressReceibingaddressactivity.setText(sharedPreferences.getString("address",
 
 
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

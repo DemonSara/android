@@ -8,13 +8,32 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.base.baseClass.BaseActivity;
+import com.google.gson.Gson;
 import com.housekeeper178.housekeeper_178.R;
 import com.housekeeper178.housekeeper_178.activity.fragment.ShareFragment;
+import com.housekeeper178.housekeeper_178.activity.model.Chart;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
+import static com.housekeeper178.housekeeper_178.activity.activity.ChangeAddressActivity.JSON;
 
 public class GoodInfoActivity extends BaseActivity {
     @BindView(R.id.goods_1)
@@ -29,19 +48,18 @@ public class GoodInfoActivity extends BaseActivity {
     TextView tvPriceGoodinfo;
     @BindView(R.id.tv_Submission_CardApplicationActivity)
     TextView tvSubmissionCardApplicationActivity;
-    //    Bundle b = this.getIntent().getExtras();
-////    String g1 = (String) b.get("goods1");
-////    String g2 = (String) b.get("goods2");
-////    String g3 = (String) b.get("goods3");
-////    String tginfo = (String) b.get("tvGoodinfo");
-////    String tgprice = (String) b.get("tvPriceGoodinfo");
-    public  String gid;
+    private int idididid;
+    SharedPreferences sps;
+    public String gid;
     public String g1;
     public String g2;
     public String g3;
     public String tginfo;
     public String tgprice;
     public String infoname;
+
+    Map<String, Integer> map = new HashMap<>();
+    List<Map<String, Integer>> lm = new ArrayList<>();
     @BindView(R.id.good_info_name)
     TextView goodInfoName;
 
@@ -60,7 +78,7 @@ public class GoodInfoActivity extends BaseActivity {
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
         Bundle b = this.getIntent().getExtras();
-gid = (String) b.get("goodsid");
+        gid = (String) b.get("goodsid");
         g1 = (String) b.get("goods1");
         g2 = (String) b.get("goods2");
         g3 = (String) b.get("goods3");
@@ -74,12 +92,52 @@ gid = (String) b.get("goodsid");
         tvGoodinfo.setText(tginfo);
         tvPriceGoodinfo.setText(tgprice);
         goodInfoName.setText(infoname);
+
+        sps = getSharedPreferences("userinfo", 0);
+        idididid = sps.getInt("id", 0);
+
+
+    }
+
+    public void addchart() {
+        Chart gooooods = new Chart();
+        Chart.ItemListBean itemListBean = new Chart.ItemListBean();
+        List<Chart.ItemListBean> itemList = new ArrayList<>();
+        itemListBean.setAmount(1);
+        itemListBean.setGoods_id(Integer.parseInt(gid));
+        itemList.add(itemListBean);
+        gooooods.setItemList(itemList);
+        gooooods.setPaytype(1);
+        gooooods.setStatus(1);
+        gooooods.setUser_id(idididid);
+        String jsonObject = new Gson().toJson(gooooods);
+        System.out.println(jsonObject);
+        OkHttpClient client = new OkHttpClient();
+        RequestBody body = RequestBody.create(JSON, jsonObject);
+        Request request = new Request.Builder()
+                .addHeader("Content-Type", "application/json")
+                .url("http://47.105.161.233:8080/greenshop/app/order_confirm")
+                .post(body)
+                .build();
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                System.out.println("motherfucker");
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response != null) {
+                    goActivity(MainActivity.class);
+
+                }
+            }
+        });
     }
 
     @OnClick(R.id.tv_Submission_CardApplicationActivity)
     public void onViewClicked() {
-
-        Toast.makeText(this,"已添加到购物车",Toast.LENGTH_SHORT).show();
-
+        addchart();
     }
 }

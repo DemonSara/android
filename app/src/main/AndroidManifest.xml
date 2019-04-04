@@ -32,13 +32,19 @@
 
         </activity>
         <activity android:name=".activity.activity.LoginActivity">
-
-        </activity>
-        <activity android:name=".activity.activity.RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activity.activity.RegisterActivity">
+
+        </activity>
+        <activity android:name=".activity.activity.ChangeUserPasswordActivity">
+
+        </activity>
+        <activity android:name=".activity.activity.FeileiGoodshowActivity">
+
         </activity>
 
     </application>

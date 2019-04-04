@@ -1,6 +1,6 @@
 package com.housekeeper178.housekeeper_178.activity.fragment;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.base.baseClass.BaseFragment;
 import com.base.model.Base;
@@ -51,7 +51,7 @@ public class HomeFragment extends BaseFragment  {
     TextView tvSearchShopActivity;
     @BindView(R.id.et_content_ShopActivity)
     EditText etContentShopActivity;
-    AhomefragmentRv adapter;
+
 
 
     @Override
@@ -115,7 +115,7 @@ public class HomeFragment extends BaseFragment  {
             case API.whichAPI.itemhot:
                 if (base.getCode().equals("true")) {
                     List<Hotgood> hg = (List<Hotgood>) base.getData();
-                    for (int i = 0; i < 5; i++) {
+                    for (int i = 0; i < hg.size(); i++) {
                         imgurl.add(hg.get(i).getCover());
                         name.add(hg.get(i).getName());
                         price.add(hg.get(i).getPrice());

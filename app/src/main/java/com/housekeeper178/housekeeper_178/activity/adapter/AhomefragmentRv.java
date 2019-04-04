@@ -81,7 +81,7 @@ public class AhomefragmentRv extends RecyclerView.Adapter<AhomefragmentRv.ViewHo
 
     @Override
     public int getItemCount() {
-        return 5;
+        return name.size();
     }
 
 

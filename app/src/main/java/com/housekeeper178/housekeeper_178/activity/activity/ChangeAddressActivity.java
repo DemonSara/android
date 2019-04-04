@@ -10,25 +10,21 @@ import android.widget.Toast;
 import com.base.baseClass.BaseActivity;
 
 import com.base.model.Base;
-import com.base.net.HttpManager;
-import com.base.net.UrlParameters;
 import com.base.util.Tool;
-import com.google.gson.Gson;
 import com.housekeeper178.housekeeper_178.R;
-
-import com.housekeeper178.housekeeper_178.activity.model.JsonChangeAddress;
 import com.housekeeper178.housekeeper_178.activity.net.API;
-import com.housekeeper178.housekeeper_178.activity.utils.PostJson;
-
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
 
 import java.io.IOException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.Call;
+import okhttp3.Callback;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -49,9 +45,10 @@ public class ChangeAddressActivity extends BaseActivity {
     private String name;
     private String phone;
     private String address;
-    String json;
-    private SharedPreferences sps;
 
+    private SharedPreferences sps;
+    public static final MediaType JSON
+            = MediaType.parse("application/json; charset=utf-8");
 
     @Override
     protected int getLayoutId() {
@@ -73,29 +70,38 @@ public class ChangeAddressActivity extends BaseActivity {
             jsonObject.put("name", name);
             jsonObject.put("phone", phone);
             jsonObject.put("address", address);
+            System.out.println(jsonObject);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        new API(this,Base.getClassType()).changeaddress(jsonObject);
 
 
 
+        OkHttpClient client = new OkHttpClient();
+        RequestBody body = RequestBody.create(JSON, String.valueOf(jsonObject));
+        Request request = new Request.Builder()
+                .addHeader("Content-Type", "application/json")
+                .url("http://47.105.161.233:8080/greenshop/app/user_changeaddress")
+                .post(body)
+                .build();
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                System.out.println("motherfucker");
+            }
 
-//        PostJson postJson = new PostJson();
-//        String result = null;
-//        try {
-//            result = postJson.post("http://47.105.161.233:8080/greenshop/app/user_changeaddress", jsonObject.toString());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        System.out.print(result);
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response != null) {
+                    goActivity(MainActivity.class);
+
+                }
+            }
+        });
+
+
     }
-
-//        PostJson postJson = new PostJson();
-//        String result = postJson.post("http://47.105.161.233:8080/greenshop/app/user_changeaddress", jsonObject.toString());
-//        System.out.print(result);
-
-
 
 
     @Override
@@ -109,18 +115,7 @@ public class ChangeAddressActivity extends BaseActivity {
 
     }
 
-    @Override
-    public void onCompleteData(Base base, int whichAPI) {
-        super.onCompleteData(base, whichAPI);
-        closeLoadingDialog();
-        switch (whichAPI){
-            case API.whichAPI.changeaddress:
-                if (base.getCode().equals("true")){
-                    Toast.makeText(this,"修改成功！",Toast.LENGTH_SHORT).show();
-                    goActivity(MainActivity.class);
-                }
-        }
-    }
+
 
     @OnClick(R.id.tv_Submission_address)
     public void onViewClicked() {

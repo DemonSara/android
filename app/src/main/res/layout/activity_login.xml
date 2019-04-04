@@ -83,6 +83,17 @@
         android:text="登录"
         android:textColor="#ffffff"
         android:textSize="18sp" />
-
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="55dip"
+        android:layout_marginRight="55dip"
+        android:id="@+id/bt_gogggg_loginActivity"
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:background="@drawable/button_click_selector_green"
+        android:text="注册"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
 
 </LinearLayout>

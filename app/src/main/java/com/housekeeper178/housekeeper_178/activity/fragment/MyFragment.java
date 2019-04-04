@@ -1,16 +1,21 @@
 package com.housekeeper178.housekeeper_178.activity.fragment;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.base.baseClass.BaseFragment;
 import com.housekeeper178.housekeeper_178.R;
 import com.housekeeper178.housekeeper_178.activity.activity.AddressActivity;
+import com.housekeeper178.housekeeper_178.activity.activity.ChangeUserPasswordActivity;
+import com.housekeeper178.housekeeper_178.activity.activity.LoginActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,6 +35,11 @@ public class MyFragment extends BaseFragment {
     @BindView(R.id.my_xiugaiyonhumima)
     RelativeLayout myXiugaiyonhumima;
     Unbinder unbinder;
+    @BindView(R.id.fragment_my_username)
+    TextView fragmentMyUsername;
+    @BindView(R.id.bt_my_go_loginActivity)
+    Button btMyGoLoginActivity;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected int getLayoutId() {
@@ -39,6 +49,7 @@ public class MyFragment extends BaseFragment {
     @Override
     protected void initView() {
 
+
     }
 
     @Override
@@ -46,6 +57,9 @@ public class MyFragment extends BaseFragment {
         // TODO: inflate a fragment view
         View rootView = super.onCreateView(inflater, container, savedInstanceState);
         unbinder = ButterKnife.bind(this, rootView);
+
+        sharedPreferences = getActivity().getSharedPreferences("userinfo", 0);
+        fragmentMyUsername.setText(sharedPreferences.getString("username", ""));
         return rootView;
     }
 
@@ -64,7 +78,13 @@ public class MyFragment extends BaseFragment {
                 goActivity(AddressActivity.class);
                 break;
             case R.id.my_xiugaiyonhumima:
+                goActivity(ChangeUserPasswordActivity.class);
                 break;
         }
+    }
+
+    @OnClick(R.id.bt_my_go_loginActivity)
+    public void onViewClicked() {
+        goActivity(LoginActivity.class);
     }
 }

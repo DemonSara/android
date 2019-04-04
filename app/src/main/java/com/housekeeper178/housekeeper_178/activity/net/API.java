@@ -59,12 +59,28 @@ public class API extends MCBaseAPI {
 
     }
 
-    public void changeaddress(Object json) {
+    public void changeuserpsw(String loginName, String oldpassword, String newpassword) {
         UrlParameters params = new UrlParameters();
-        params.setUrl("app/user_changeaddress");
-        params.addFile("json", json, UrlParameters.FileType.JSON);
-        post(params,whichAPI.changeaddress);
+        params.setUrl("app/user_changepwd");
+        params.add("username", loginName);
+        params.add("password", oldpassword);
+        params.add("newPassword", newpassword);
+        post(params, whichAPI.changeuserpsw);
     }
+
+    public void typelist() {
+        UrlParameters params = new UrlParameters();
+        params.setUrl("app/goods_type");
+        get(params, whichAPI.typelist);
+    }
+
+    public void goodsList(int typeId) {
+        UrlParameters params = new UrlParameters();
+        params.setUrl("app/goodsList");
+        params.add("typeId", typeId);
+        get(params, whichAPI.goodsList);
+    }
+
 
     public void gouwuche(int goods_id, int amount, int paytype, int status, int user_id) {
         UrlParameters params = new UrlParameters();
@@ -89,9 +105,13 @@ public class API extends MCBaseAPI {
         public static final int itemhot = ONE + 3;
         //查找
         public static final int searchgoods = ONE + 4;
-        //修改地址
-        public static final int changeaddress = ONE + 5;
+        //修改密码
+        public static final int changeuserpsw = ONE + 5;
         //购物车
         public static final int gouwuche = ONE + 6;
+        //商品类别
+        public static final int typelist = ONE + 7;
+        //类别查询
+        public static final int goodsList = ONE + 8;
     }
 }

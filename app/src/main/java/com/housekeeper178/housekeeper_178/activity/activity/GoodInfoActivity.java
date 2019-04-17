@@ -2,20 +2,17 @@ package com.housekeeper178.housekeeper_178.activity.activity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.base.baseClass.BaseActivity;
+import com.base.util.Tool;
 import com.google.gson.Gson;
 import com.housekeeper178.housekeeper_178.R;
-import com.housekeeper178.housekeeper_178.activity.fragment.ShareFragment;
 import com.housekeeper178.housekeeper_178.activity.model.Chart;
 import com.squareup.picasso.Picasso;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -48,6 +45,8 @@ public class GoodInfoActivity extends BaseActivity {
     TextView tvPriceGoodinfo;
     @BindView(R.id.tv_Submission_CardApplicationActivity)
     TextView tvSubmissionCardApplicationActivity;
+    @BindView(R.id.goodsinfo_et_amount)
+    EditText goodsinfoEtAmount;
     private int idididid;
     SharedPreferences sps;
     public String gid;
@@ -57,6 +56,7 @@ public class GoodInfoActivity extends BaseActivity {
     public String tginfo;
     public String tgprice;
     public String infoname;
+    private int i = 1;
 
     Map<String, Integer> map = new HashMap<>();
     List<Map<String, Integer>> lm = new ArrayList<>();
@@ -100,10 +100,11 @@ public class GoodInfoActivity extends BaseActivity {
     }
 
     public void addchart() {
+        int et = Integer.parseInt(Tool.getTextViewContent(goodsinfoEtAmount));
         Chart gooooods = new Chart();
         Chart.ItemListBean itemListBean = new Chart.ItemListBean();
         List<Chart.ItemListBean> itemList = new ArrayList<>();
-        itemListBean.setAmount(1);
+        itemListBean.setAmount(et);
         itemListBean.setGoods_id(Integer.parseInt(gid));
         itemList.add(itemListBean);
         gooooods.setItemList(itemList);

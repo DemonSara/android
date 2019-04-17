@@ -23,6 +23,7 @@ public class API extends MCBaseAPI {
         user = HKApplication.getUserInfo();
     }
 
+
     public void register(String username, String password, String email, String realname, String phonenum, String address) {
         UrlParameters params = new UrlParameters();
         params.setUrl("app/user_register");
@@ -93,6 +94,28 @@ public class API extends MCBaseAPI {
         post(params, whichAPI.gouwuche);
 
     }
+    public void orderListSimple(int id,int status) {
+        UrlParameters params = new UrlParameters();
+        params.setUrl("app/orderListSimple");
+        params.add("id", id);
+        params.add("status", status);
+        get(params, whichAPI.orderListSimple);
+    }
+    public void orderDelete(int id) {
+        UrlParameters params = new UrlParameters();
+        params.setUrl("app/orderDelete");
+        params.add("id", id);
+        post(params, whichAPI.orderDelete);
+
+    }
+    public void changestatus(int id,int status) {
+        UrlParameters params = new UrlParameters();
+        params.setUrl("app/orderStatus");
+        params.add("id", id);
+        params.add("status", status);
+        post(params, whichAPI.changestatus);
+
+    }
 
 
     public class whichAPI {
@@ -113,5 +136,11 @@ public class API extends MCBaseAPI {
         public static final int typelist = ONE + 7;
         //类别查询
         public static final int goodsList = ONE + 8;
+        //简单订单
+        public static final int orderListSimple = ONE + 9;
+        //删除订单
+        public static final int orderDelete = ONE + 10;
+        //修改订单状态码
+        public static final int changestatus = ONE + 11;
     }
 }

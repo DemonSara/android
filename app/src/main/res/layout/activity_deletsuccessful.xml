@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="113dp"
+        android:src="@mipmap/none_plan"
+        android:layout_gravity="center"
+       />
+<TextView
+    android:layout_marginTop="10dp"
+    android:textSize="15sp"
+    android:textColor="@color/red_light"
+    android:text="删除成功!"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_d_s"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:background="@drawable/tv_bag4dp_green1"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="返回"
+        android:textSize="15dp"
+        />
+</LinearLayout>

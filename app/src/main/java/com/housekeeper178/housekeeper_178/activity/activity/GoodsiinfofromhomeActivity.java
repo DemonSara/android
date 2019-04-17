@@ -3,12 +3,14 @@ package com.housekeeper178.housekeeper_178.activity.activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.base.baseClass.BaseActivity;
 import com.base.model.Base;
+import com.base.util.Tool;
 import com.google.gson.Gson;
 import com.housekeeper178.housekeeper_178.R;
 import com.housekeeper178.housekeeper_178.activity.model.Chart;
@@ -47,12 +49,15 @@ public class GoodsiinfofromhomeActivity extends BaseActivity {
     TextView homeGoodsPrice;
     @BindView(R.id.tv_Submission_homejiarugouwuche)
     TextView tvSubmissionHomejiarugouwuche;
+    @BindView(R.id.home_et_amount)
+    EditText homeEtAmount;
     private String g1;
     private String info;
     private String price;
     private String name;
     private String goodid;
     private int userid;
+    private int i = 1;
     SharedPreferences sps;
 
     @Override
@@ -100,11 +105,13 @@ public class GoodsiinfofromhomeActivity extends BaseActivity {
                 }
         }
     }
-    private void addcharttt(){
+
+    private void addcharttt() {
+        int et = Integer.parseInt(Tool.getTextViewContent(homeEtAmount));
         Chart gooooods = new Chart();
         Chart.ItemListBean itemListBean = new Chart.ItemListBean();
         List<Chart.ItemListBean> itemList = new ArrayList<>();
-        itemListBean.setAmount(1);
+        itemListBean.setAmount(et);
         itemListBean.setGoods_id(Integer.parseInt(goodid));
         itemList.add(itemListBean);
         gooooods.setItemList(itemList);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/linear_MyOrderFragment"
+    android:id="@+id/item_all_order_lin"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="15dp"
@@ -26,24 +26,25 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_shopname_myorderfragment"
+            android:id="@+id/tv_shopname_itemorder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:ellipsize="end"
-
             android:maxLines="2"
             android:text="非煮不可"
             android:textColor="#333333"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
+
         <TextView
-            android:textColor="#999999"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:paddingLeft="200dp"
-            android:text="点击删除"
+            android:ellipsize="end"
+            android:text="已付款"
+            android:textColor="#333333"
             android:textSize="14sp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,7 +52,7 @@
             android:layout_marginTop="10dp">
 
             <TextView
-                android:id="@+id/tv_price_myorderfragment"
+                android:id="@+id/tv_price_itemallorder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -62,14 +63,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="x"
-                android:textColor="#999999"
-                android:textSize="14sp" />
-            <TextView
-                android:id="@+id/tv_good_amount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"
+                android:text="x1"
                 android:textColor="#999999"
                 android:textSize="14sp" />
         </LinearLayout>

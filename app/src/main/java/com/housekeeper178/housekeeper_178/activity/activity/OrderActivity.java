@@ -8,7 +8,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.base.baseClass.BaseActivity;
+import com.base.model.Base;
 import com.housekeeper178.housekeeper_178.R;
+import com.housekeeper178.housekeeper_178.activity.model.ChartList;
+import com.housekeeper178.housekeeper_178.activity.net.API;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,7 +37,9 @@ public class OrderActivity extends BaseActivity {
     TextView tvPaymentOrderDetailsActivity;
     @BindView(R.id.linear_OrderDetailsActivity)
     LinearLayout linearOrderDetailsActivity;
+    private int userid;
     SharedPreferences preferences;
+    List<Integer> ddid = new ArrayList<>();
     @Override
     protected int getLayoutId() {
         return R.layout.activity_order;
@@ -62,6 +70,12 @@ public class OrderActivity extends BaseActivity {
         ButterKnife.bind(this);
 
     }
+    private void changebillstatus(){
+        preferences = getSharedPreferences("userinfo", 0);
+         userid = preferences.getInt("id", 0);
+        new API(this, ChartList.getListClassType()).orderListSimple(userid, 1);
+
+    }
 
     @OnClick({R.id.zhifubao, R.id.wechat, R.id.tv_cancel_OrderDetailsActivity, R.id.tv_payment_OrderDetailsActivity})
     public void onViewClicked(View view) {
@@ -76,8 +90,28 @@ public class OrderActivity extends BaseActivity {
                 goActivity(MainActivity.class);
                 break;
             case R.id.tv_payment_OrderDetailsActivity:
+                changebillstatus();
                 goActivity(PaySuccessfulActivity.class);
                 break;
+        }
+    }
+
+
+
+    @Override
+    public void onCompleteData(Base base, int whichAPI) {
+        super.onCompleteData(base, whichAPI);
+        closeLoadingDialog();
+        switch (whichAPI) {
+            case API.whichAPI.orderListSimple:
+                if (base.getCode().equals("true")){
+                    List<ChartList> cc = (List<ChartList>) base.getData();
+                    for (int i = 0; i < cc.size(); i++){
+                        new API(this, Base.getClassType()).changestatus(cc.get(i).getId(), 2);
+                    }
+                }
+
+
         }
     }
 }

@@ -43,5 +43,6 @@ dependencies {
     api 'com.android.support.constraint:constraint-layout:2.0.0-alpha2'
     api 'com.google.zxing:core:3.3.3'
     api files('libs/scanner.jar')
+
 }
 

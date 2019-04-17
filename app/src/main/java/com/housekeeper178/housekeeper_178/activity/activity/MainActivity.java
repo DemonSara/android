@@ -1,12 +1,14 @@
 package com.housekeeper178.housekeeper_178.activity.activity;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.base.baseClass.BaseActivity;
@@ -17,6 +19,7 @@ import com.housekeeper178.housekeeper_178.activity.fragment.SchoolFragment;
 import com.housekeeper178.housekeeper_178.activity.fragment.ShareFragment;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
@@ -40,6 +43,12 @@ public class MainActivity extends BaseActivity {
     ImageView imgMy;
     @BindView(R.id.tv_my_mainActivity)
     TextView tvMy;
+    @BindView(R.id.linear_home_mainActivity)
+    LinearLayout linearHomeMainActivity;
+    @BindView(R.id.linear_share_mainActivity)
+    LinearLayout linearShareMainActivity;
+    @BindView(R.id.linear_my_mainActivity)
+    LinearLayout linearMyMainActivity;
     private Fragment[] fgtArr;
     private int prePosition = -1;
     long time = 0;
@@ -48,6 +57,7 @@ public class MainActivity extends BaseActivity {
     SchoolFragment schoolFragment;
     ShareFragment shareFragment;
     MyFragment myFragment;
+
     @Override
     protected void onBackKey() {
         long cur = System.currentTimeMillis();
@@ -59,6 +69,7 @@ public class MainActivity extends BaseActivity {
             System.exit(0);
         }
     }
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_main;
@@ -66,16 +77,16 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        context=this;
+        context = this;
         fgtArr = new Fragment[4];
-        homeFragment=new HomeFragment();
-        schoolFragment=new SchoolFragment();
-        shareFragment=new ShareFragment();
-        myFragment=new MyFragment();
-        fgtArr[0]=homeFragment;
-        fgtArr[1]=schoolFragment;
-        fgtArr[2]=shareFragment;
-        fgtArr[3]=myFragment;
+        homeFragment = new HomeFragment();
+        schoolFragment = new SchoolFragment();
+        shareFragment = new ShareFragment();
+        myFragment = new MyFragment();
+        fgtArr[0] = homeFragment;
+        fgtArr[1] = schoolFragment;
+        fgtArr[2] = shareFragment;
+        fgtArr[3] = myFragment;
         changeFgt(0);
     }
 
@@ -138,4 +149,17 @@ public class MainActivity extends BaseActivity {
                 break;
         }
     }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+        int id = getIntent().getIntExtra("pos", 0);
+        changeFgt(id);
+
+
+    }
+
+
 }

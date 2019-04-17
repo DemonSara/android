@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@mipmap/loginbbgg"
     android:orientation="vertical"
-    >
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:src="@drawable/address_select"/>
 
+    >
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
  <LinearLayout
-     android:layout_marginTop="40dp"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:gravity="center_vertical"
@@ -30,13 +34,13 @@
          android:drawableLeft="@mipmap/usericon"
          android:drawablePadding="10dp"
          android:hint="用户名或邮箱"
-
          android:maxLength="11"
          android:singleLine="true"
-         android:textColorHint="#bebebe"
+         android:textColorHint="@color/white"
          android:textSize="18sp" />
 
  </LinearLayout>
+
     <View
         android:layout_marginLeft="55dp"
         android:layout_marginRight="55dp"
@@ -59,7 +63,7 @@
         android:hint="输入登录密码"
         android:maxLength="14"
         android:singleLine="true"
-        android:textColorHint="#bebebe"
+        android:textColorHint="@color/white"
         android:textSize="18sp" />
     <View
         android:layout_marginBottom="8dp"
@@ -72,6 +76,7 @@
         />
 
     <Button
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:layout_marginBottom="15dp"
         android:layout_marginLeft="55dip"
@@ -95,5 +100,6 @@
         android:text="注册"
         android:textColor="#ffffff"
         android:textSize="18sp" />
+    </LinearLayout>
 
 </LinearLayout>

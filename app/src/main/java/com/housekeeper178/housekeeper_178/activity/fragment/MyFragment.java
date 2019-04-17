@@ -15,6 +15,7 @@ import com.base.baseClass.BaseFragment;
 import com.housekeeper178.housekeeper_178.R;
 import com.housekeeper178.housekeeper_178.activity.activity.AddressActivity;
 import com.housekeeper178.housekeeper_178.activity.activity.ChangeUserPasswordActivity;
+import com.housekeeper178.housekeeper_178.activity.activity.CheckAllOrderActivity;
 import com.housekeeper178.housekeeper_178.activity.activity.LoginActivity;
 
 import butterknife.BindView;
@@ -73,6 +74,7 @@ public class MyFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.my_quanbudingdan:
+                goActivity(CheckAllOrderActivity.class);
                 break;
             case R.id.my_shouhuodizhi:
                 goActivity(AddressActivity.class);

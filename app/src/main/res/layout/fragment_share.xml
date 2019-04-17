@@ -43,19 +43,6 @@
         android:layout_alignParentBottom="true"
         android:background="@color/white">
 
-
-        <Button
-            android:id="@+id/delete_shop_cart_all"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:paddingLeft="10dp"
-            android:scaleX="0.6"
-            android:scaleY="0.6"
-            android:text="清除"
-            android:textColor="#333333" />
-
-
         <Button
             android:id="@+id/btn_shop_cart_to_pay"
             android:layout_width="100dp"

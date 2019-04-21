@@ -71,6 +71,7 @@ public class OrderActivity extends BaseActivity {
 
     }
     private void changebillstatus(){
+        //获取用户ID
         preferences = getSharedPreferences("userinfo", 0);
          userid = preferences.getInt("id", 0);
         new API(this, ChartList.getListClassType()).orderListSimple(userid, 1);

@@ -64,6 +64,7 @@ public class LoginActivity extends BaseActivity {
             case API.whichAPI.Login:
                 if (base.getCode().equals("true")) {
                     List<UserInfo> list = (List<UserInfo>) base.getData();
+                    //储存用户信息
                     SharedPreferences.Editor sharedata = getSharedPreferences("userinfo", 0).edit();
                     sharedata.putString("address", list.get(0).getAddress());
                     sharedata.putString("email", list.get(0).getEmail());

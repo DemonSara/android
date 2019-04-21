@@ -96,6 +96,7 @@ public class GoodsiinfofromhomeActivity extends BaseActivity {
                     g1 = gdifs.get(0).getCover();
                     String g2 = gdifs.get(0).getImage1();
                     String g3 = gdifs.get(0).getImage2();
+                    //填充视图
                     Picasso.get().load("http://47.105.161.233:8080" + g1).fit().into(homeGoods1);
                     Picasso.get().load("http://47.105.161.233:8080" + g2).fit().into(homeGoods2);
                     Picasso.get().load("http://47.105.161.233:8080" + g3).fit().into(homeGoods3);

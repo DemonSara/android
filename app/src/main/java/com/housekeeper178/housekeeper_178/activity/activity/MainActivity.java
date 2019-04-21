@@ -90,6 +90,7 @@ public class MainActivity extends BaseActivity {
         changeFgt(0);
     }
 
+    //切换fragment
     public void changeFgt(int curPosition) {
         if (curPosition == prePosition) {
             return;

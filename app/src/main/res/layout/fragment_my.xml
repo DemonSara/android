@@ -6,37 +6,36 @@
     android:orientation="vertical"
     android:background="#f2f3f9"
     tools:context=".activity.fragment.MyFragment">
-<LinearLayout
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@mipmap/mybag"
+<RelativeLayout
+
+    android:background="@mipmap/mybground"
     android:layout_weight="2"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:text="亲爱的"
-        android:textSize="20sp"
+    <ImageView
+        android:id="@+id/hshs"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/hs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
+        android:textSize="20sp"
+       android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/hshs"
         android:id="@+id/fragment_my_username"
-        android:textSize="30sp"
         android:text="用户名"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:textSize="15sp"
-        android:text="您好"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" />d
 
-</LinearLayout>
+</RelativeLayout>
     <LinearLayout
         android:orientation="vertical"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout
+            android:background="@color/white"
             android:layout_marginTop="20dp"
             android:id="@+id/my_quanbudingdan"
             android:layout_width="match_parent"
@@ -57,6 +56,8 @@
                 android:textColor="#5d5d5d" />
         </RelativeLayout>
         <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
             android:id="@+id/my_shouhuodizhi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -76,6 +77,8 @@
                 android:textColor="#5d5d5d" />
         </RelativeLayout>
         <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
             android:id="@+id/my_xiugaiyonhumima"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -96,7 +99,7 @@
         </RelativeLayout>
 
         <Button
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="130dp"
             android:layout_gravity="center"
             android:layout_marginBottom="15dp"
             android:layout_marginLeft="55dip"
@@ -104,7 +107,7 @@
             android:id="@+id/bt_my_go_loginActivity"
             android:layout_width="match_parent"
             android:layout_height="35dip"
-            android:background="@drawable/button_click_selector_green"
+            android:background="@mipmap/subplanbg"
             android:text="退出登录"
             android:textColor="#ffffff"
             android:textSize="18sp" />

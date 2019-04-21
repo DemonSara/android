@@ -96,6 +96,7 @@ public class HomeFragment extends BaseFragment  {
             case API.whichAPI.searchgoods:
                 if (base.getCode().equals("true")) {
                     List<GoodsInfo> goodsInfos = (List<GoodsInfo>) base.getData();
+                    //储存商品信息
                     Map<String,String> m = new HashMap<>();
                     m.put("goods1",goodsInfos.get(0).getCover());
                     m.put("goods2",goodsInfos.get(0).getImage1());

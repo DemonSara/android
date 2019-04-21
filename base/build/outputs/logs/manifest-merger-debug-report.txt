@@ -1,139 +1,139 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:1:1-51:12
-INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:1:1-51:12
-INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:1:1-51:12
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:1:1-51:12
+INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:1:1-51:12
+INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:1:1-51:12
 	package
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:2:5-23
-		INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
-		INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:2:5-23
+		INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml
+		INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:1:11-69
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.BLUETOOTH
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:4:5-68
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:4:5-68
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:4:22-65
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:4:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:5:5-74
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:5:5-74
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:5:22-71
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:5:22-71
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:7:5-79
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:7:22-76
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:7:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:8:5-81
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:8:5-81
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:8:22-78
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:8:22-78
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:12:5-71
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:12:5-71
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:12:22-68
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:12:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:13:5-71
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:13:5-71
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:13:22-68
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:13:22-68
 uses-permission#android.permission.USE_FINGERPRINT
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:15:5-74
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:15:5-74
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:15:22-71
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:15:22-71
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:16:5-81
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:16:22-78
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:16:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:17:5-80
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:17:5-80
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:17:22-77
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:17:22-77
 uses-permission#android.permission.INTERNET
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:19:5-67
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:19:5-67
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:19:22-64
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:19:22-64
 uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:20:5-79
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:20:5-79
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:20:22-76
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:20:22-76
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:21:5-76
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:21:5-76
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:21:22-73
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:21:22-73
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:22:5-79
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:22:22-76
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:22:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:23:5-76
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:23:5-76
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:23:22-73
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:23:22-73
 uses-permission#android.permission.CAMERA
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:24:5-65
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:24:5-65
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:24:22-62
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:24:22-62
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:26:5-75
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:26:5-75
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:26:22-72
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:26:22-72
 uses-permission#android.permission.WRITE_CONTACTS
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:28:5-73
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:28:5-73
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:28:22-70
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:28:22-70
 uses-permission#android.permission.READ_CONTACTS
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:30:5-72
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:30:5-72
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:30:22-69
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:30:22-69
 application
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:32:5-49:19
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:32:5-49:19
 activity#com.base.pickphoto.AddPhotoActivity
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:33:9-64
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:33:9-64
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:33:19-61
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:33:19-61
 activity#com.base.galleryview.ui.ImagePagerActivity
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:34:9-71
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:34:9-71
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:34:19-68
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:34:19-68
 activity#com.base.pickphoto.PhotoAlbumActivity
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:35:9-66
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:35:9-66
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:35:19-63
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:35:19-63
 activity#com.base.pickphoto.PhotoWallActivity
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:36:9-65
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:36:9-65
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:36:19-62
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:36:19-62
 activity#com.base.qrcode.CaptureActivity
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:37:9-60
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:37:9-60
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:37:19-57
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:37:19-57
 receiver#com.base.baseClass.BPBroadcastReceiver
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:39:9-67
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:39:9-67
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:39:19-64
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:39:19-64
 provider#android.support.v4.content.FileProvider
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:40:9-48:20
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:40:9-48:20
 	android:grantUriPermissions
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:44:13-47
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:44:13-47
 	android:authorities
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:42:13-64
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:42:13-64
 	android:exported
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:43:13-37
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:41:13-67
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:41:13-67
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:45:13-47:54
+ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:45:13-47:54
 	android:resource
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:47:17-51
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:47:17-51
 	android:name
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml:46:17-67
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml:46:17-67
 uses-sdk
-INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
-INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
-INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
-INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
+INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml
+INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml
+INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml
+INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
-		INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
+		INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml
+		INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
-		ADDED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
-		INJECTED from F:\program\Housekeeper_178\base\src\main\AndroidManifest.xml
+		INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml
+		ADDED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml
+		INJECTED from F:\program\Housekeeper_178\android\base\src\main\AndroidManifest.xml

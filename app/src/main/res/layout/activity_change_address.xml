@@ -83,7 +83,7 @@
                 android:id="@+id/tv_Submission_address"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:background="@drawable/tv_bag4dp_green1"
+                android:background="@mipmap/subplanbg"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"

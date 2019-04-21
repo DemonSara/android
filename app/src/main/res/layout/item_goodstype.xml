@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="@color/white"
+    android:background="@mipmap/wlistbg"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_marginRight="20dp"
     android:layout_marginLeft="20dp"
     android:layout_marginTop="20dp"
     android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="50dp">
+    android:layout_height="100dp">
 <TextView
+    android:layout_marginLeft="140dp"
     android:id="@+id/tv_item_type"
-    android:textColor="@color/black"
+    android:textColor="@color/white"
     android:textSize="30sp"
     android:text="绿色蔬菜"
     android:layout_width="wrap_content"

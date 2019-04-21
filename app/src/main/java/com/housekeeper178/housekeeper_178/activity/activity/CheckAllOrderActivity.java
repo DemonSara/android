@@ -25,7 +25,7 @@ public class CheckAllOrderActivity extends BaseActivity {
     private SharedPreferences sps;
     List<String> goodsname = new ArrayList<>();
     List<String> price = new ArrayList<>();
-
+    List<String> amount = new ArrayList<>();
 
     @Override
     protected int getLayoutId() {
@@ -58,8 +58,9 @@ public class CheckAllOrderActivity extends BaseActivity {
                     for (int i = 0; i < chalist.size(); i++){
                         goodsname.add(chalist.get(i).getGoodsName());
                         price.add(chalist.get(i).getTotal());
+                        amount.add(chalist.get(i).getAmount());
                     }
-                    checkallorderRv.setAdapter(new AllOrderAdapter(this,goodsname,price));
+                    checkallorderRv.setAdapter(new AllOrderAdapter(this,goodsname,price,amount));
                     LinearLayoutManager layoutManager = new LinearLayoutManager(this);
                     checkallorderRv.setLayoutManager(layoutManager);
 

@@ -57,7 +57,7 @@ public class GoodsiinfofromhomeActivity extends BaseActivity {
     private String name;
     private String goodid;
     private int userid;
-    private int i = 1;
+    private int et = 1;
     SharedPreferences sps;
 
     @Override
@@ -108,7 +108,10 @@ public class GoodsiinfofromhomeActivity extends BaseActivity {
     }
 
     private void addcharttt() {
-        int et = Integer.parseInt(Tool.getTextViewContent(homeEtAmount));
+
+        if (Tool.getTextViewContent(homeEtAmount) != null) {
+            et = Integer.parseInt(Tool.getTextViewContent(homeEtAmount));
+        }
         Chart gooooods = new Chart();
         Chart.ItemListBean itemListBean = new Chart.ItemListBean();
         List<Chart.ItemListBean> itemList = new ArrayList<>();

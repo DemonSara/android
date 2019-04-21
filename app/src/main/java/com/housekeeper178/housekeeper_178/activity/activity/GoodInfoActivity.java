@@ -56,7 +56,7 @@ public class GoodInfoActivity extends BaseActivity {
     public String tginfo;
     public String tgprice;
     public String infoname;
-    private int i = 1;
+    private int et = 1;
 
     Map<String, Integer> map = new HashMap<>();
     List<Map<String, Integer>> lm = new ArrayList<>();
@@ -100,7 +100,9 @@ public class GoodInfoActivity extends BaseActivity {
     }
 
     public void addchart() {
-        int et = Integer.parseInt(Tool.getTextViewContent(goodsinfoEtAmount));
+        if (Tool.getTextViewContent(goodsinfoEtAmount) != null) {
+            et = Integer.parseInt(Tool.getTextViewContent(goodsinfoEtAmount));
+        }
         Chart gooooods = new Chart();
         Chart.ItemListBean itemListBean = new Chart.ItemListBean();
         List<Chart.ItemListBean> itemList = new ArrayList<>();

@@ -16,11 +16,15 @@ public class AllOrderAdapter extends RecyclerView.Adapter<AllOrderAdapter.ViewHo
     Context context;
     private List<String> goodsname;
     private List<String> price;
-    public AllOrderAdapter(Context context, List<String> goodsname, List<String> price) {
+    private List<String> amount;
+
+    public AllOrderAdapter(Context context, List<String> goodsname, List<String> price, List<String> amount) {
         this.context = context;
         this.goodsname = goodsname;
         this.price = price;
+        this.amount = amount;
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -29,20 +33,25 @@ public class AllOrderAdapter extends RecyclerView.Adapter<AllOrderAdapter.ViewHo
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView goodname;
         TextView total;
+        TextView a;
 
         public ViewHolder(View itemView) {
             super(itemView);
             goodname = itemView.findViewById(R.id.tv_shopname_itemorder);
             total = itemView.findViewById(R.id.tv_price_itemallorder);
+            a = itemView.findViewById(R.id.orderitemamount);
         }
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        holder.goodname.setText(goodsname.get(position));
+        holder.total.setText(price.get(position));
+        holder.a.setText(amount.get(position));
     }
 
     @Override
